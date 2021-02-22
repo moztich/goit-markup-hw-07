@@ -1,0 +1,43 @@
+.feature-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-item {
+    width: 270px;
+  }
+
+  &-heading {
+    font-size: 14px;
+    line-height: 1.1428;
+    letter-spacing: 0.03em;
+    padding-bottom: 10px;
+  }
+
+  &-paragraph {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142;
+    letter-spacing: 0.03em;
+    color: var(--secondary-black-color);
+  }
+
+  &-container {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--buttom-background);
+  }
+
+  &-photo {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+  }
+}

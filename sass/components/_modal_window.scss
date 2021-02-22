@@ -1,0 +1,208 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.button-close {
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--white-color);
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: var(--blue-secondary-color);
+  }
+}
+
+.icon-close {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill 250ms var(--cubic);
+}
+
+.modal-head {
+  display: inline-block;
+  width: 100%;
+  height: 23px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-family: var(--first-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-black-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.modal-form-label {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  font-family: var(--first-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1666;
+  letter-spacing: 0.01em;
+  color: var(--secondary-black-color);
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms var(--cubic), fill 250ms var(--cubic);
+  padding-left: 40px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--blue-secondary-color);
+    fill: var(--blue-secondary-color);
+  }
+
+  &:focus ~ .modal-form-svg,
+  &:hover ~ .modal-form-svg,
+  &:active ~ .modal-form-svg {
+    fill: var(--blue-secondary-color);
+  }
+}
+
+.modal-form-textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: border-color 250ms var(--cubic);
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: var(--blue-secondary-color);
+  }
+
+  &::placeholder {
+    font-family: var(--first-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-form-checkbox-text {
+  font-family: var(--first-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142;
+  letter-spacing: 0.03em;
+  color: var(--secondary-black-color);
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+
+  & a {
+    color: var(--blue-secondary-color);
+    text-decoration: underline;
+  }
+}
+
+.modal-form-svg {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 11px;
+  left: 12px;
+  transition: fill 250ms var(--cubic);
+}
+
+.modal-form-position-item {
+  position: relative;
+}
+
+.modal-form-svg-checkbox {
+  width: 16px;
+  height: 15px;
+  fill: var(--white-color);
+  border: solid 2px var(--first-black-color);
+  border-radius: 2px;
+}
+
+.modal-form-checkbox:checked
+  ~ .modal-form-checkbox-text
+  > .modal-form-svg-checkbox {
+  fill: var(--white-color);
+  background-color: var(--blue-secondary-color);
+  border-color: var(--blue-secondary-color);
+}
+
+.modal-form-button {
+  width: 200px;
+  height: 50px;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: solid 1px #188ce8;
+  font-family: var(--first-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  outline: none;
+  margin: 0 auto;
+  margin-top: 30px;
+}

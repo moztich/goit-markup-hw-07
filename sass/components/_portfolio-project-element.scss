@@ -1,0 +1,122 @@
+.project-element {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-button {
+  display: flex;
+  height: 38px;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  font-family: inherit;
+  color: inherit;
+  background-color: var(--buttom-background);
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 0px;
+  height: 38px;
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--white-color);
+    background-color: var(--blue-secondary-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.button-item:not(:last-child) {
+  margin-right: 9px;
+}
+
+.project-element-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-element-item {
+  outline: 1px solid #eeeeee;
+  width: 370px;
+  height: auto;
+
+  &:not(:nth-child(3n + 3)) {
+    margin-right: 30px;
+  }
+
+  &:nth-last-child(n + 4) {
+    margin-bottom: 30px;
+  }
+}
+
+.project-element-link {
+  display: block;
+  transition: box-shadow 250ms var(--cubic);
+
+  &:hover .overlay,
+  &:focus .overlay,
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(0);
+  }
+}
+
+.project-element-images {
+  width: 370px;
+  height: 294px;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.text {
+  color: var(--secondary-black-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+.project-element-text {
+  padding: 20px 24px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--first-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55555;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic);
+}
+
+.overlay-item {
+  position: relative;
+  overflow: hidden;
+}
